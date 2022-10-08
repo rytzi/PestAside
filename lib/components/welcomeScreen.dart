@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pestasidecapstoneproj/widgets/errorBox.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 
 import 'homeScreen.dart';
@@ -38,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
                     context,
                     PageRouteBuilder(
                       pageBuilder: (context, animation1, animation2) =>
-                          const HomeScreen(),
+                          HomeScreen(widget: const ErrorBox(),),
                       transitionDuration: Duration.zero,
                       reverseTransitionDuration: Duration.zero,
                     ),

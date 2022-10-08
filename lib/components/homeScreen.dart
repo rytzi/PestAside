@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:pestasidecapstoneproj/widgets/cameraScanner.dart';
+import 'package:pestasidecapstoneproj/widgets/errorBox.dart';
+
 // import 'package:camera/camera.dart';
 // import 'package:pestaside/controller/takePictureScreen.dart';
 // import 'package:pestaside/widget/cameraScanner.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  final Widget widget;
+
+  const HomeScreen({Key? key, required this.widget}) : super(key: key);
+
   //
   // Future<Widget> main() async {
   //   WidgetsFlutterBinding.ensureInitialized();
@@ -21,9 +26,10 @@ class HomeScreen extends StatelessWidget {
     return Container(
       decoration: const BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/background.jpg'),
-            fit: BoxFit.fill,
-          )),
+        image: AssetImage('assets/background.jpg'),
+        fit: BoxFit.fill,
+      )),
+      child: widget,
       // child: const CameraScanner(),
     );
   }
