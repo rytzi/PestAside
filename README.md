@@ -1,6 +1,6 @@
 # pestasidecapstoneproj
 
-Ritzi April's capstone project.
+Ritzi, Mark and Racel's capstone project.
 
 ## Getting Started
 
