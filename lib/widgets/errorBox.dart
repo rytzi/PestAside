@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pestasidecapstoneproj/components/homeScreen.dart';
+import 'package:pestasidecapstoneproj/widgets/scanResult.dart';
 
 class ErrorBox extends StatelessWidget {
   const ErrorBox({
@@ -32,17 +33,16 @@ class ErrorBox extends StatelessWidget {
               style: TextStyle(
                   decoration: TextDecoration.none,
                   color: Colors.black,
-                  // fontSize: 20
-              ),
+                  fontSize: 20),
             ),
             Spacer(),
             const Text(
-              "The system cannot detect the pest. Please try again",
+              "The system cannot detect the pest. Please try again.",
               textAlign: TextAlign.center,
               style: TextStyle(
                   decoration: TextDecoration.none,
                   color: Colors.black,
-                  fontSize: 20),
+                  fontSize: 15),
             ),
             Spacer(),
             TextButton(
@@ -54,9 +54,7 @@ class ErrorBox extends StatelessWidget {
                   context,
                   PageRouteBuilder(
                     pageBuilder: (context, animation1, animation2) =>
-                        HomeScreen(
-                      widget: const ErrorBox(),
-                    ),
+                        const HomeScreen(widget: ScanResult()),
                     transitionDuration: Duration.zero,
                     reverseTransitionDuration: Duration.zero,
                   ),
